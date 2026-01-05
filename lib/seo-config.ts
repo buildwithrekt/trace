@@ -21,8 +21,8 @@ export const seoConfig = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@trace_tax", // Change to your Twitter
-    creator: "@trace_tax",
+    site: "@trace", // Change to your Twitter
+    creator: "@trace",
     title: "Trace - Solana Tax Tracker",
     description: "Track every Solana transaction automatically. Generate tax reports in seconds.",
     images: ["/opengraph-image.png"],

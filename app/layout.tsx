@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ClientLayout } from "@/components/client-layout";
 import { seoConfig, jsonLd } from "@/lib/seo-config";
+import { Analytics } from "@vercel/analytics/next"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -58,6 +59,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <ClientLayout>{children}</ClientLayout>
+        <Analytics/>
       </body>
     </html>
   );
