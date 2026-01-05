@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { updateUserPlan } from "@/lib/supabase-helpers";
 
 // Only show in development
 const isDev = process.env.NODE_ENV === "development";

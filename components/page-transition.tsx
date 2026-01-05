@@ -20,7 +20,7 @@ export function PageTransition({ children }: PageTransitionProps) {
         exit={{ opacity: 0, y: -20 }}
         transition={{
           duration: 0.4,
-          ease: [0.645, 0.045, 0.355, 1.0],
+          ease: [0.645, 0.045, 0.355, 1.0] as const,
         }}
       >
         {children}
@@ -33,7 +33,7 @@ export function PageTransition({ children }: PageTransitionProps) {
 export const fadeInUp = {
   initial: { opacity: 0, y: 60 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6, ease: [0.645, 0.045, 0.355, 1.0] },
+  transition: { duration: 0.6, ease: [0.645, 0.045, 0.355, 1.0] as const },
 };
 
 export const fadeIn = {
@@ -45,7 +45,7 @@ export const fadeIn = {
 export const scaleIn = {
   initial: { opacity: 0, scale: 0.9 },
   animate: { opacity: 1, scale: 1 },
-  transition: { duration: 0.5, ease: [0.645, 0.045, 0.355, 1.0] },
+  transition: { duration: 0.5, ease: [0.645, 0.045, 0.355, 1.0] as const },
 };
 
 export const staggerContainer = {
@@ -65,7 +65,7 @@ export const staggerItem = {
     y: 0,
     transition: {
       duration: 0.5,
-      ease: [0.645, 0.045, 0.355, 1.0],
+      ease: [0.645, 0.045, 0.355, 1.0] as const,
     },
   },
 };

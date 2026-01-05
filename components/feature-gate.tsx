@@ -1,7 +1,7 @@
 "use client";
 
 import { ReactNode } from "react";
-import { usePlan } from "@/hooks/use-plan";
+import { usePlan, Plan } from "@/hooks/use-plan";
 import Link from "next/link";
 
 interface FeatureGateProps {
@@ -11,19 +11,30 @@ interface FeatureGateProps {
   showUpgrade?: boolean;
 }
 
+// Define which features are available on each plan
+const PLAN_FEATURES: Record<Plan, string[]> = {
+  free: ["scan", "export"],
+  pro: ["scan", "export", "multiWallet", "unlimitedScans", "unlimitedExports", "priority"],
+  trenchor: ["scan", "export", "multiWallet", "unlimitedScans", "unlimitedExports", "priority", "api", "whiteLabel"],
+};
+
+function hasFeature(plan: Plan, feature: string): boolean {
+  return PLAN_FEATURES[plan]?.includes(feature) ?? false;
+}
+
 export function FeatureGate({
   feature,
   children,
   fallback,
   showUpgrade = true,
 }: FeatureGateProps) {
-  const { hasFeature, plan, isLoading } = usePlan();
+  const { plan, loading } = usePlan();
 
-  if (isLoading) {
+  if (loading) {
     return null;
   }
 
-  if (!hasFeature(feature)) {
+  if (!hasFeature(plan, feature)) {
     if (fallback) {
       return <>{fallback}</>;
     }
@@ -52,7 +63,7 @@ export function FeatureGate({
                 Upgrade Required
               </h3>
               <p className="text-sm text-muted-foreground mb-3">
-                This feature is not available on your current plan ({plan?.name || "free"}).
+                This feature is not available on your current plan ({plan}).
               </p>
               <Link
                 href="/#pricing"
