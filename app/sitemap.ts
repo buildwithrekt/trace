@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://trace.tax";
+  const baseUrl = "https://trace.buildwithrekt";
 
   return [
     {

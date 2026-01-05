@@ -2,11 +2,11 @@ export const seoConfig = {
   title: "Trace - Solana Tax Tracker",
   titleTemplate: "%s | Trace",
   description: "Track every Solana transaction automatically. Generate tax reports in seconds. FIFO/LIFO support, multi-wallet tracking, and accountant-ready exports.",
-  canonical: "https://trace.tax", // Change to your domain
+  canonical: "https://trace.buildwithrekt", // Change to your domain
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://trace.tax",
+    url: "https://trace.buildwithrekt",
     siteName: "Trace",
     title: "Trace - Solana Tax Tracker",
     description: "Track every Solana transaction automatically. Generate tax reports in seconds.",
@@ -45,7 +45,7 @@ export const seoConfig = {
   authors: [
     {
       name: "Trace",
-      url: "https://trace.tax",
+      url: "https://trace.buildwithrekt",
     },
   ],
   creator: "Trace",
@@ -76,7 +76,7 @@ export const jsonLd = {
   "@type": "WebApplication",
   name: "Trace",
   description: "Track every Solana transaction automatically. Generate tax reports in seconds.",
-  url: "https://trace.tax",
+  url: "https://trace.buildwithrekt",
   applicationCategory: "FinanceApplication",
   offers: {
     "@type": "Offer",
