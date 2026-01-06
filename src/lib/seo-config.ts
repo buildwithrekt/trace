@@ -12,7 +12,7 @@ export const  seoConfig = {
     description: "Track every Solana transaction automatically. Generate tax reports in seconds.",
     images: [
       {
-        url: "/opengraph-image.png",
+        url: "https://trace.buildwithrekt.com/assets/opengraph-image.png",
         width: 1200,
         height: 630,
         alt: "Trace - Solana Tax Tracker",
@@ -25,7 +25,7 @@ export const  seoConfig = {
     creator: "@trace",
     title: "Trace - Solana Tax Tracker",
     description: "Track every Solana transaction automatically. Generate tax reports in seconds.",
-    images: ["/opengraph-image.png"],
+    images: ["https://trace.buildwithrekt.com/assets/opengraph-image.png"],
   },
   keywords: [
     "solana tax",
