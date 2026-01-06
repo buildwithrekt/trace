@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://trace.buildwithrekt/sitemap.xml
+Sitemap: https://trace.buildwithrekt.com/sitemap.xml

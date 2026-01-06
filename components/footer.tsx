@@ -9,7 +9,7 @@ export default function footer() {
          <span className="text-xl font-bold text-foreground">trace.</span>
        </div>
        <p className="text-sm text-muted-foreground">
-         Built with ❤️ for degens who made it
+         Built by <a href="https://x.com/r3ktsatoshi">rekt</a>
        </p>
      </div>
    </div>
